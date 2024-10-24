@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameLoom</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#actions">Nos actions</a></li>
+            <li><a href="#roles">Nos rôles</a></li>
+            <li><a href="#contact">Nous contacter</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section Home -->
+    <section id="home" style="background: url('path/to/image.jpg') no-repeat center center; background-size: cover;">
+        <h1 data-aos="fade-up">Bienvenue sur GameLoom</h1>
+        <p data-aos="fade-up" data-aos-delay="100">Nous connectons les joueurs à travers le monde. Rejoignez-nous !</p>
+        <button id="join-button">Rejoignez-nous</button>
+        
+        <!-- Section du formulaire d'inscription -->
+        <div id="signup-form" style="display: none;">
+            <h2>Inscription</h2>
+            <form id="register-form">
+                <input type="text" name="name" placeholder="Nom" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Mot de passe" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </section>
+ 
+
+
+    <!-- Section À propos -->
+    <section id="about" data-aos="fade-up">
+        <h2>À propos</h2>
+        <p>GameLoom est une plateforme dédiée aux gamers du monde entier. Nous offrons des solutions de gestion de communautés et des événements eSports.</p>
+    </section>
+
+    <!-- Section Nos actions -->
+    <section id="actions" data-aos="fade-left">
+        <h2>Nos actions</h2>
+        <p>Découvrez les différents projets et initiatives que nous avons lancés pour faire grandir la communauté du gaming.</p>
+    </section>
+
+    <!-- Section Nos rôles -->
+    <section id="roles" data-aos="fade-right">
+        <h2>Nos rôles</h2>
+        <p>Nous facilitons l'organisation d'événements, la gestion d'équipes et la promotion du jeu responsable.</p>
+    </section>
+
+    <!-- Section Nous contacter -->
+    <section id="contact" data-aos="fade-up">
+        <h2>Nous contacter</h2>
+        <form id="contact-form">
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <!-- Chatbot -->
+    <div id="chatbot">
+        <div id="chatbot-header">
+            <button id="toggle-chat"><i class="fas fa-robot"></i></button> <!-- Icône de robot -->
+        </div>
+        <div id="chatbot-body" class="hidden">
+            <div id="chat-window">
+                <p id="bot-message">Bonjour, comment puis-je vous aider ?</p>
+            </div>
+            <input type="text" id="chat-input" placeholder="Tapez votre message ici...">
+            <button id="chat-send">Envoyer</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    
+    <!-- Button to trigger form -->
+<button id="join-us-btn" class="cta-btn">Rejoignez-nous</button>
+
+<!-- Signup form overlay -->
+<div id="signup-form-overlay" class="overlay" style="display: none;">
+    <div class="signup-form-container">
+        <span id="close-form" class="close-btn">&times;</span>
+        <h2>Inscrivez-vous</h2>
+        <form>
+            <label for="username">Nom d'utilisateur</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">S'inscrire</button>
+        </form>
+
+        <!-- Social login options -->
+        <div class="social-login">
+            <p>Ou inscrivez-vous avec :</p>
+            <button class="social-btn google" onclick="onGoogleSignIn()">Google</button>
+            <button class="social-btn facebook" onclick="onFacebookSignIn()">Facebook</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
